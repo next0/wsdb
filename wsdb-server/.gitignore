@@ -1,0 +1,20 @@
+# Tool specific artifacts
+node_modules
+npm-debug.log*
+
+# OS specific artifacts
+.DS_Store
+
+# IDE specific artifacts
+.idea
+.vscode
+*.swp
+
+# Project specific artifacts
+/dist
+/tmp
+/secrets
+/__reports
+
+# Special
+*.log

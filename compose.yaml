@@ -1,0 +1,21 @@
+services:
+  wsdb-server:
+    build: ./wsdb-server
+    ports:
+      - "8002:80"
+  wsdb-client-app:
+    build: ./wsdb-client-app
+    ports:
+      - "8001:80"
+  wsdb-balancer:
+    build: ./wsdb-balancer
+    ports:
+      - "8000:80"
+    links:
+      - wsdb-server
+      - wsdb-client-app
+    depends_on:
+      - wsdb-server
+      - wsdb-client-app
+
+

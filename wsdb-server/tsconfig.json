@@ -1,0 +1,15 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "compilerOptions": {
+    "incremental": true,
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "types": [
+      "vitest/globals"
+    ]
+  },
+  "include": [
+    "src",
+    "node_modules/vitest/globals.d.ts"
+  ]
+}
